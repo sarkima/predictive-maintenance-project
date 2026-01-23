@@ -4,8 +4,6 @@ import pandas as pd
 import seaborn as sns
 import streamlit as st
 
-
-import streamlit as st
 import pages.overview as overview
 import pages.performance as performance
 import pages.explorer as explorer
@@ -44,26 +42,7 @@ else:
     )
 
 
-
-
-# Page config
-st.set_page_config(page_title="Credit Card Churn Analysis", page_icon="💔", layout="wide")
-
-# Title
-st.title("Credit Card Churn Prediction Analysis")
-st.write("Analysing factors that influence credit card churn")
-
-# Load data
-@st.cache_data
-def load_data():
-    df = pd.read_csv('bank-churners.csv')
-    return df
-
-df = load_data()
-
-
-# Display page based on selection
-from pages import overview, performance, explorer, sensor_diagnostics, insights
+# --- Sidebar navigation ---
 
 menu = st.sidebar.radio(
     "Go to",

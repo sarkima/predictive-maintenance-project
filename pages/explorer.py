@@ -88,11 +88,8 @@ def run():
     st.markdown("""
     - **True RUL Chart:** shows the actual remaining useful life of the engine over cycles  
     - **Predicted RUL Chart:** shows the model's prediction of remaining useful life over cycles  
+        - This helps assess how reliable the model is for maintenance decisions.
     - **Maintenance Threshold:** indicates when maintenance should be scheduled based on the selected threshold  
-    
-    **Interpretation:**  
-    Compare how closely the predicted RUL follows the true RUL.  
-    This helps assess how reliable the model is for maintenance decisions.
     """)
                 
                 

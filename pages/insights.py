@@ -53,15 +53,6 @@ def run():
     - Regularly review model performance and recalibrate thresholds as needed  
     - Consider integrating real-time sensor data for dynamic RUL predictions
 
-    - Sensor X and Y show strong degradation patterns.
-    - Improved model reduces RMSE by Z%.
-    - Prediction accuracy is strongest in the early mid life of engines.                 
-
-    ### Key Insights
-    - Sensor X and Y show strong degradation patterns.
-    - Improved model reduces RMSE by Z% compared to baseline.
-    - Prediction accuracy is strongest in the early mid life of engines.
-
     ### Recommendations
     - Schedule maintenance when predicted RUL < **N cycles**.
     - Monitor sensors X and Y closely for early warning signs.
@@ -72,11 +63,4 @@ def run():
     - Add LSTM/GRU models for deeper time series learning.
     - Build a digital twin concept for real time simulation.
 
-    """)
-
-    st.markdown("### Next Steps")
-    st.write("""
-    - Expand to all NASA CMAPSS subsets  
-    - Add LSTM/GRU models for deeper time series learning  
-    - Build a digital twin simulation page  
     """)
