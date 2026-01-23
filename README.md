@@ -1,5 +1,3 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
 ## **Predicting Remaining Useful Life (RUL) of a Turbofan Engine Using Machine Learning**
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
@@ -44,8 +42,8 @@ Key business questions:
 
 - How long before an engine reaches failure?
 - Which sensors provide the strongest early indicators of degradation?
-- Can we recommend optimal maintenance intervals? (**remove**)
-- What cost savings could predictive maintenance deliver? (**remove**)
+- Can we recommend optimal maintenance intervals?
+- What cost savings could predictive maintenance deliver?
 
 ## Project Objectives
 
@@ -58,51 +56,39 @@ Key business questions:
 - Perform descriptive analytics to understand sensor behaviour
 - Identify key drivers of engine degradation
 - Compare multiple predictive models
-- Build a prescriptive maintenance recommendation (**remove**)
 - Communicate insights through visualisations and a business focused narrative
 
 ## Hypotheses Testing
 
 The following hypotheses will be explored either through visualisation or testing:
 
-- Operational settings have substantial effect on engine performance
-- Some operating conditions are far greater indicator of failures than others
+- Operational settings have substantial effects on engine performance
+- Some sensors are far greater indicator of failures than others
 - There is correlation between RUL and some operating conditions/sensors/engines
-- Gradient Boosting (XGBoost / LightGBM) performs better than Random Forest Regressor
+- Gradient Boosting Regressor performs better than Random Forest Regressor
 - Predictive maintenance delivers cost savings over scheduled maintenance
 
 ## Methodology
 
-The methodology used for this project involved conducting the following types of data analytics.  The beauty of the NASA CMAPSS datasets is that it allow us to conduct the full categories of data analytics - descriptive, diagnostic, predictive, prescriptive and cognitive.  However, for this project we will limit it to descriptive, diagnostic and predictive.
+The methodology used for this project involved conducting the following types of data analytics.  The beauty of the NASA CMAPSS dataset is that it allow us to conduct the full categories of data analytics - descriptive, diagnostic, predictive, prescriptive and cognitive.  However, for this project we will limit it to descriptive, diagnostic and predictive.
 
-A. Descriptive Analytics
-•	Explore sensor trends over engine cycles
-•	Visualise degradation patterns
-•	Identify anomalies and outliers
-•	Compare operating conditions
-B. Diagnostic Analytics
-•	Correlation analysis
-•	Feature importance
-•	Healthy vs degrading engine behaviour
-•	Sensor drift analysis
-C. Predictive Analytics
-Models you may implement:
-•	Linear Regression
-•	Random Forest Regressor
-•	Gradient Boosting (XGBoost / LightGBM)
-•	LSTM or GRU neural networks (optional advanced step)
-Evaluation metrics:
-•	RMSE
-•	MAE
-•	R²
-D. Prescriptive Analytics
-•	Recommend maintenance intervals
-•	Estimate downtime reduction
-•	Provide cost benefit insights
-•	Suggest operational adjustments
-E. Cognitive Analytics (Optional)
-•	Simulate a simple digital twin concept
-•	Show how predictions update in real time
+- A. Descriptive Analytics
+  -	Explore sensor trends over engine cycles
+  - Visualise degradation patterns
+  - Identify anomalies and outliers
+  - Compare operating conditions
+
+- B. Diagnostic Analytics
+  - Correlation analysis
+  -	Feature importance
+  -	Healthy vs degrading engine behaviour
+  -	Sensor drift analysis
+
+- C. Predictive Analytics
+  - Models to consider:
+  -	Random Forest Regressor
+  -	Gradient Boosting (XGBoost / LightGBM)
+  -	LSTM or GRU neural networks
 
 ## Tools & Technologies
 
@@ -119,140 +105,69 @@ The following libraries, tools and technologies were used in the project:
 - Exploratory data analysis
 - Predictive model with performance metrics
 - Visual dashboard showing engine health and RUL
-- Business focused presentation (**remove this**)
-- Written report summarising findings and recommendations (**remove this**)
+- Key findings and recommendations
 
 ## Dashboard Development
 
-A dashboard application was developed using Streamlit.  It allows both technical and non-technical uses to gain an insight into the dataset and perform some predictive maintenance analytics.  The dashboard covers the following:
-
-- 
-- 
-- 
+A dashboard web application was developed using Streamlit providing overview, engine explorer, sensor diagnostics, model performance, insights and recommendations .  It allows both technical and non-technical users to gain an insight into the dataset, receive some recommendations and perform some predictive maintenance analytics.  The dashboard can be access the following  [link](https://predictive-maintenance-project-ge9iv5ikdy5uj9jnaejzwb.streamlit.app/)
 
 ## Key Insights and Recommendations
 
-- Written report summarising findings and recommendations (**remove this**)
+Many of the key insights and recommendations of this project have been covered in many locations in the Jupyter Notebook and the Streamlit Dashboard App.
+
+The project set out to answer some business questions and test some hypotheses.  While time did not allow the conduct of statistical hypothesis testing, many of the data visualisations ploted and the predictive models built have answered many of these questions and hypotheses.
+
+- How long before an engine reaches failure can easily be answered by visualising its Remaining Useful Life (RUL)
+- Which sensors provide the strongest early indicators of degradation can be answered by checking the visualisation of the correlation heatmaps of sensors to RUL
+- Optimal maintenance intervals can be recommended by observing the engine degradation overtime and knowing its RUL
+- Cost savings offered by predictive maintenance over scheduled or reactive maintenance can readily be estimated
+- It was noticed that operational settings have limited if any effects on engine performance
+- Feature performance and its visualisation show that some sensors are far greater indicator of failures than others - in fact a few othem - 3 or 4
+- There is correlation between RUL and some sensors but less so of operating conditions or engine types
+- There was very little difference between Gradient Boosting Regressor and Random Forest Regressor on any of their two scores (RMSE and MAE)
+- Predictive maintenance can deliver susbstantial cost savings over reactive or scheduled maintenance
 
 ## Future Work
 
-A. Descriptive Analytics
-•	Explore sensor trends over engine cycles
-•	Visualise degradation patterns
-•	Identify anomalies and outliers
-•	Compare operating conditions
-B. Diagnostic Analytics
-•	Correlation analysis
-•	Feature importance
-•	Healthy vs degrading engine behaviour
-•	Sensor drift analysis
-C. Predictive Analytics
-Models you may implement:
-•	Linear Regression
-•	Random Forest Regressor
-•	Gradient Boosting (XGBoost / LightGBM)
-•	LSTM or GRU neural networks (optional advanced step)
-Evaluation metrics:
-•	RMSE
-•	MAE
-•	R²
-D. Prescriptive Analytics
-•	Recommend maintenance intervals
-•	Estimate downtime reduction
-•	Provide cost benefit insights
-•	Suggest operational adjustments
-E. Cognitive Analytics (Optional)
-•	Simulate a simple digital twin concept
-•	Show how predictions update in real time
+Time limitations did not allow one to conduct many of the tasks planned for this project.  One would have conducted a more detailed descriptive analytics or diagnostic analysics.  Some of the more advanced and interesting machine learning models, such as XGBoost or Artificial Neural Networks, could have experimented upon.  Estimating downtime reduction or recommending maintenance with prescriptive analytics could be conducted.  Also in consideration is cognitive analytics, with the prospect of showing how predictions in real-time could be possible though a digital twin.
+
+Furthermore, only subset of the four subsets of the dataset was used in this project. Using the four subsets offer the prospect of analysing a fleet of engines.
+
+The design of the dashboard was small and simple but could be developed further in details and made as the go to app for insights, recommendations and predictive modelling of engines.
 
 ## Ethical Considerations
 
+The dataset used for the project are sensors, engines and operating conditions data.  The dataset was provided by NASA CMAPSS and is open and available through many organisations.  The one used for the project was sourced a Kaggle.  Since it is open and no personal data involved there is no ethical consideration in the collection, processing and storage of the dataset.
+
 ## Project Planning, Management and Documentation
+
+The project planning and management was conducted via [GitHub Project](https://github.com/users/sarkima/projects/2/views/1). The project was broken down into items using a Kaban flow system with items moving from backlog through ready, in progress to done. The time taken to complete each item can be tracked and the number of commits made during each item can be noted. The flow of items through the system can be tracked and actions can be taken to deal with bottlenecks or items taking too long to complete than planned noted and addressed.
 
 ## Conclusion
 
+The project provided me with the opportunity to explore real-world datasets and apply some of the knowledge and expertise gained with the Code Institute to solve challenging industrial problems with predictive analytics.
+
+This project has sourced, processed and analysed NASA CMPASS engines dataset to industrial problems using data analytics and machine learning for engines predictive maintenance.  Data visualisations, predictive models, and a Streamlit Dashboard app were produced to provide helpful insights, recommendations and interactive tools for exploration and better understanding.  A number of business questions were answered and many interesting hypotheses were tested.
+
 ## Reflections
+
+The project was very interesting and I enjoyed doing it as it has the project of covering the full spectrum of data analytics - from descriptive through diagnostic, predictive, prescriptive and all the way down to cognitive analytics.  However, many difficulties were encountered through out the project.  Not enough time, computing slowing down to a frustrating snail speed with all the loadded libraries and tools, not getting the project template to work the Python 3.13.9 that was loaded on my computer, and not getting enough sleep.  Hopefully, the learning outcome will be rewarding.
 
 ## AI Tools
 
 The following AI tools were used in the project:
 
-- Microsoft Copilot was used to search for a suitable dataset for the project.  It was also used to generate a suitable structure and business requirements for the project. Some code snipets were also generated for some parts of the project.
-- GitHub Copilot was used for code snipets suggestion using prompting and for optimising some of the code.
+- Microsoft Copilot was used to search for a suitable dataset for the project.  It was also used to generate a suitable structure and business requirements for the project. Some code snipets were also generated for some parts of the project.  It was also used to help developed a modular, structured and concised Streamlit Dashboard App.
+- GitHub Copilot was used for code snipets suggestion using prompting, dealing with errors, requesting help with problems encountered, and for optimising some of the code.
 
 ## Credits
 
+I would like to credit the following:
+
+- NASA CMPASS and Kaggle for providing the dataset that was used for the project.
+- Code Institute course materials that we used in the project.
+- AI tools that helped in searching for this dataset, guided in the planning of the project, and aided in the execution of the project with helpful computing prompts.
+
 ## Acknowledgement
 
-
-
-## Template Instructions
-
-Welcome,
-
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
-
-1. Copy the URL of your repository to your clipboard.
-
-1. In VS Code, select **File** -> **Open Folder**.
-
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
-
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open the terminal.
-
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
-
-1. In VS Code, select **File** > **Open Folder** again.
-
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
-
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
-
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
-
-1. Choose **Venv** from the dropdown list.
-
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
-
-1. **DO NOT** click the box next to `requirements.txt`, as you need to do more steps before you can install your dependencies. Click **OK**.
-
-1. You will see a `.venv` folder appear in the file explorer pane to show that the virtual environment has been created.
-
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
-
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
-
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
-
- ```console
- pip3 install -r requirements.txt
- ```
-
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
-
-1. Click the **kernel** button and choose **Python Environments**.
-
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
-
-```console
-! python --version
-```
-
-## Deployment Reminders
-
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version that closest matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+I acknowledge the support and help provided by the staff of the Code Institute during the execusion of this project.
