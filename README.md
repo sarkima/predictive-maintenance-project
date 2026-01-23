@@ -143,6 +143,8 @@ The dataset used for the project are sensors, engines and operating conditions d
 
 The project planning and management was conducted via [GitHub Project](https://github.com/users/sarkima/projects/2/views/1). The project was broken down into items using a Kaban flow system with items moving from backlog through ready, in progress to done. The time taken to complete each item can be tracked and the number of commits made during each item can be noted. The flow of items through the system can be tracked and actions can be taken to deal with bottlenecks or items taking too long to complete than planned noted and addressed.
 
+The project is fully documented in the README.md file, the Jupyter Notebook, and the Streamlit Dashboard Web App.  The project's repository is located [here](https://github.com/sarkima/predictive-maintenance-project).
+
 ## Conclusion
 
 The project provided me with the opportunity to explore real-world datasets and apply some of the knowledge and expertise gained with the Code Institute to solve challenging industrial problems with predictive analytics.
