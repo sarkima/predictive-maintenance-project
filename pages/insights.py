@@ -11,8 +11,8 @@ def run():
     st.markdown("### Feature Importance (Gradient Boosting)")
     fig = px.bar(
         fi,
-        x="importance",
-        y="feature",
+        x="Importance",
+        y="Feature",
         orientation="h",
         title="Feature Importance",
         height=600
@@ -55,7 +55,7 @@ def run():
 
     ### Recommendations
     - Schedule maintenance when predicted RUL < **N cycles**.
-    - Monitor sensors X and Y closely for early warning signs.
+    - Monitor sensors 11 and 4 closely for early warning signs.
     - Integrate the model into a real time monitoring system for continuous updates.
 
     ### Next Steps

@@ -10,6 +10,9 @@ import pages.explorer as explorer
 import pages.insights as insights
 import pages.sensor_diagnostics as sensor_diagnostics
 
+# --- Page title ---
+st.set_page_config(page_title="Turbo Fan RUL Dashboard", layout="wide")
+
 
 # --- Theme toggle ---
 if "theme" not in st.session_state:
@@ -40,8 +43,6 @@ else:
         unsafe_allow_html=True
     )
 
-# --- Page title ---
-st.set_page_config(page_title="Turbo Fan RUL Dashboard", layout="wide")
 
 # --- Sidebar navigation ---
 
